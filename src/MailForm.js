@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import axios from 'axios';
 
 const MailForm = () => {
     const initialState = { 
@@ -19,9 +20,17 @@ const MailForm = () => {
         e.preventDefault();
         const {name,discount,code,email}=formData;
         let template = `${name} ${discount} ${code} ${email}`;
-        console.log(template);
+        
+        // axios post request to the API in the flask backend
+        axios.post('/api/email-out', formData)
+        .then(function(response){
+            console.log(response);
+            })
+            .catch(function(error){
+                console.log(error);
+
+            });
         setFormData(initialState);
-        // ajax request maybe axios?
     }
     return (
         <form onSubmit={handleSubmit}>

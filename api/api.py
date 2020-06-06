@@ -17,22 +17,24 @@ def show_confirmation():
     return render_template("confirmation.html")
 
 
-@app.route('/api/email-out')
-def get_current_time():
-    # message = Mail(
-    # from_email='adrian@houseofbeards.me',
-    # to_emails='adrian.mojica@gmail.com',
-    # subject='Sending with Twilio SendGrid is Fun',
-    # html_content='<strong>and easy to do anywhere, even with Python</strong>')
+@app.route('/api/email-out',methods = ['POST'])
+def send_email():
+    data = request.get_json()
+    print(data)
+    message = Mail(
+    from_email='adrian@houseofbeards.me',
+    to_emails=data['email'],
+    subject=f'{data["name"]}! save {data["discount"]} this Holiday',
+    html_content=f'<strong>Hi, {data["name"]}. <br> Get {data["discount"]}% off, when you enter the code {data["code"]} at checkout.</strong>')
 
-    # try:
-    #     sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-    #     response = sg.send(message)
-    #     print(response.status_code)
-    #     print(response.body)
-    #     print(response.headers)
-    # except Exception as e:
-    #     print(e.body)
+    try:
+        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+        response = sg.send(message)
+        print(response.status_code)
+        print(response.body)
+        print(response.headers)
+    except Exception as e:
+        print(e.body)
 
-    # print(message)        
+    print(message)        
     return {'message': 'done'}
