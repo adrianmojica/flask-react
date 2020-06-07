@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import MailForm from './MailForm'
-import './App.css';
+import './App.scss';
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(0);
-
-  // useEffect(() => {
-  //   fetch('/api/email-out').then(res => res.json()).then(data => {
-  //     setCurrentTime(data.message);
-  //   });
-  // }, []);
-
   return (
     <div className="App">
-      <p>The current time is {currentTime}.</p>
-      <MailForm/>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col">
+          </div>
+          <div className="col-6">
+            <div id="form-card" className="card">
+              <div className="card-header">
+                <h5>Email Configuration</h5>
+              </div>
+              <div className="card-body">
+                <MailForm/>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
