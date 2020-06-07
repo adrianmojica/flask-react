@@ -14,6 +14,7 @@ def index():
 
 @app.route('/confirmation', methods =['POST'])
 def show_confirmation():
+    """Creates and returns the email with all the info and template"""
     data = request.get_json()
     name = data['name']
     discount = data['discount']
@@ -42,6 +43,7 @@ def show_confirmation():
 
 @app.route('/api/email-out',methods = ['POST'])
 def send_email():
+    """sends email to final destination"""
     data = request.get_json()
     print(data)
     message = Mail(
