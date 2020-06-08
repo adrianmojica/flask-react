@@ -92,6 +92,9 @@ const MailForm = () => {
     // render my Mailform and modal modules
     return (
         <div id="config-form" className="form-group">
+            <div>
+                
+            </div>
             <form onSubmit={handleSubmit}>
                 <label className="col-form-label" htmlFor="name">Name</label>
                 <input
@@ -102,10 +105,10 @@ const MailForm = () => {
                     placeholder="First Name"
                     value={formData.name}
                     onChange={handleChange}
-                    required="true"
+                    required={true}
                 />
                 <label className="col-form-label" htmlFor="discount">Discount</label>
-                <div className="input-group mb-3">
+                <div className="input-group discountField">
                     <input 
                         className="form-control"
                         id="discount" 
@@ -114,7 +117,7 @@ const MailForm = () => {
                         placeholder="Discount Amount"
                         value={formData.discount}
                         onChange={handleChange}
-                        required="true"
+                        required={true}
                     />
                     <div className="input-group-append">
                         <span className="input-group-text" id="basic-addon2">%</span>
@@ -129,7 +132,7 @@ const MailForm = () => {
                     value={formData.code}
                     placeholder="CODE"
                     onChange={handleChange}
-                    required="true"
+                    required={true}
                 />
                 <label className="col-form-label" htmlFor="email">Email</label>
                 <input 
@@ -140,12 +143,12 @@ const MailForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required="true"
+                    required={true}
                 />
-                <div className="form-group">
+                <div className="form-group selector">
                     <label htmlFor="template">Select template</label>
-                    <select name="template" className="form-control" required="true" default="fall" value={formData.template} id="template" onChange={handleChange}>
-                        <option value="">Choose A template</option>
+                    <select name="template" className="form-control" required={true} default="fall" value={formData.template} id="template" onChange={handleChange}>
+                        <option value="">Choose a template</option>
                         <option value="fall">Fall</option>
                         <option value="holiday">Holiday</option>
                         <option value="summer">Summer</option>
@@ -164,9 +167,9 @@ const MailForm = () => {
                 </Modal.Body>
                 <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>
-                    Close
+                    Cancel
                 </Button>
-                <Button variant="primary" onClick={sendEmail}>
+                <Button variant="success" onClick={sendEmail}>
                     Confirm and Send
                 </Button>
                 </Modal.Footer>

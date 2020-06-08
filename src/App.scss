@@ -1,7 +1,8 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background: #63239e;
+  background: #281D4C;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App {
@@ -9,13 +10,67 @@ body {
   height:100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  margin-top:30px;
 }
 
 #form-card {
-  margin-top:50px;
+  margin-top:30px;
+  margin-bottom: 40px;
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #757575;
+    opacity: 1; /* Firefox */
+  }
+  h5{
+    color: #281D4C;
+    margin-top: 0px;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .card-header,.input-group-text {
+    background-color: #E2E9EE;
+  }
+  select{
+    color:#757575;;
+  }
+  label {
+    color:#281D4C
+  }
+  .selector{
+    margin-top: 10px;
+  }
+  .btn-success {
+    color: #fff;
+    background-color: #D8276C;
+    border-color: #D8276C;
+    border-radius: 1px;
+    text-transform: uppercase;
+    &:hover{
+      background-color: #281D4C;
+      border-color: #281D4C;
+    }
+  }
+  
+}
+
+.btn-success {
+  color: #fff;
+  background-color: #D8276C;
+  border-color: #D8276C;
+  border-radius: 1px;
+  text-transform: uppercase;
+  &:hover{
+    background-color: #281D4C;
+    border-color: #281D4C;
+  }
+}
+
+.btn-secondary {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #757575;
+  border-color: #757575;
+  border-radius: 1px;
 }
 
 #config-form {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MailForm from './MailForm'
+import Image from 'react-bootstrap/Image';
 import './App.scss';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
           <div className="col">
           </div>
           <div className="col-6">
+          <Image src="https://via.placeholder.com/150x150" className="logo" roundedCircle />
             <div id="form-card" className="card">
               <div className="card-header">
                 <h5>Email Configuration</h5>

@@ -14,3 +14,8 @@ on a separate terminal window
 this project runs in your http://localhost:3000/ with a proxy for the backend at http://localhost:5000/ for the api requests 
 if you have any questions please contact me at adrian.mojica@gmail.com
 
+Areas of improvement:
+-I think I would like to add a better validation engine to the form.
+-I would like to add images to the email and deeper styling
+-I would like to add tests
+-add accessibility
