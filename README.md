@@ -16,6 +16,6 @@ if you have any questions please contact me at adrian.mojica@gmail.com
 
 Areas of improvement:
 -I think I would like to add a better validation engine to the form.
--I would like to add images to the email and deeper styling
+-I would like to add images to the email and deeper styling to the email.
 -I would like to add tests
--add accessibility
+-Add accessibility

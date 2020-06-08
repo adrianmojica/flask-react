@@ -11,7 +11,7 @@ function App() {
           <div className="col">
           </div>
           <div className="col-6">
-          <Image src="https://via.placeholder.com/150x150" className="logo" roundedCircle />
+          <Image src="/logo.png" className="logo" />
             <div id="form-card" className="card">
               <div className="card-header">
                 <h5>Email Configuration</h5>
